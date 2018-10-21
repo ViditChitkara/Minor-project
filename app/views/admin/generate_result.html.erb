@@ -1,0 +1,6 @@
+Results for <%= @election.name %><br>
+
+<% @results.each do |candidate_number, vote_count| %>
+  Voter <%= candidate_number %> : <%= vote_count %> votes
+  <br>
+<% end %>

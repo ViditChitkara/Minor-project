@@ -1,0 +1,32 @@
+<section class="section">
+  <div class="do-section-heading">
+    <h1>Elections</h1>
+  </div>
+
+  <div class="do-custom-section-content">
+
+    <table class="table-bordered table-responsive table">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Vote</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @elections.each do |election| %>
+        <tr>
+          <td><%= election.name %></td>
+          <td><%= link_to 'Vote' , "/election/#{election.id}" %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+  </div>
+
+</section>
+
+<br>
+<br>
+

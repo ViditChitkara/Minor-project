@@ -1,0 +1,10 @@
+<%= @election.name %>
+<br>
+<% if @mapping.voted %>
+  You have already voted for <%= @election.name %>.
+<% else %>
+    <% @election.candidates.each do |c| %>
+      <%= button_to("Vote for candidate #{c.candidate_number}", {:controller => "home", :action => "create_vote", election_id: @election.id, candidate_id: c.id} , :method=>:post) %>
+      <br>
+    <% end %>
+<% end %>

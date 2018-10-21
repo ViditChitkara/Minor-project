@@ -1,0 +1,33 @@
+<section class="section">
+  <div class="do-section-heading">
+    <h1>Elections</h1>
+  </div>
+
+  <%= link_to 'New Election', 'new_election' %>
+
+  <div class="do-custom-section-content">
+
+    <table class="table-bordered table-responsive table">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+
+      <tbody>
+        <% @elections.each do |election| %>
+          <tr>
+            <td><%= link_to election.name , "/admin/election/#{election.id}" %></td>
+            <td><%= link_to 'Generate Results' , "/admin/election/#{election.id}/generate_result" %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+  </div>
+
+</section>
+
+<br>
+<br>

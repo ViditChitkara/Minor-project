@@ -1,0 +1,7 @@
+<%= form_tag url_for(controller: 'admin', action: :create_elections) do %>
+  <%= text_field_tag :name, nil, placeholder: 'Name' %>
+  <%= number_field_tag :candidates_count, nil, placeholder: 'Total number of candidates' %>
+  <%= submit_tag 'Create Election' %>
+<% end %>
+
+

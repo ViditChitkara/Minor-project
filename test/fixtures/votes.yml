@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  encrypted_vote: MyString
+  string: MyString
+  election: one
+
+two:
+  encrypted_vote: MyString
+  string: MyString
+  election: two
